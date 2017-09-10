@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Stage.create!(name: "À rencontrer")
+Stage.create!(name: "Entretient")
+
+Applicant.create!(
+  name: "Steve Jobs",
+  job: "Producteur de pommes",
+  avatar: "https://randomuser.me/api/portraits/men/34.jpg"
+)
