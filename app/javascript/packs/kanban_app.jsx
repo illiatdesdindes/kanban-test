@@ -1,18 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-class KanbanApp extends React.Component {
-
-  render(){
-    return (
-      <h1>Tralalala</h1>
-    )
-  }
-
-}
-
+import KanbanApp from '../src/KanbanApp.jsx'
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<KanbanApp />, document.getElementById('app'));
+  ReactDOM.render(<KanbanApp />, document.getElementById('app'))
 })
 
