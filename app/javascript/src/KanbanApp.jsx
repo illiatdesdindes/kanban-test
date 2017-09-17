@@ -6,7 +6,10 @@ class KanbanApp extends React.Component {
   render() {
     return (
       <Provider store={this.props.store}>
-        <Board />
+        <div>
+          <nav className="navbar__component">Kanban</nav>
+          <Board />
+        </div>
       </Provider>
     );
   }
