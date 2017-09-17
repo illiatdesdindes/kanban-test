@@ -1,5 +1,13 @@
-@import "colors";
+@import "vars";
 
 .board__component {
+  white-space: nowrap;
   background: $light-gray;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-x: auto;
+  padding: 20px;
 }
