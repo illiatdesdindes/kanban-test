@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917173100) do
+ActiveRecord::Schema.define(version: 20170910201203) do
 
   create_table "applicants", force: :cascade do |t|
     t.integer "stage_id"

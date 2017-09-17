@@ -10,6 +10,7 @@ Stage.create!(name: "À rencontrer")
 Stage.create!(name: "Entretient")
 
 Applicant.create!(
+  stage: Stage.first,
   name: "Steve Jobs",
   job: "Producteur de pommes",
   avatar: "https://randomuser.me/api/portraits/men/34.jpg"
