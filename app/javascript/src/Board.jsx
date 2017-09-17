@@ -1,6 +1,6 @@
 import React from "react";
 import { inject, observer } from "mobx-react";
-import Stage from "./Stage";
+import Stage from "./Stage.jsx";
 
 @inject("store")
 @observer

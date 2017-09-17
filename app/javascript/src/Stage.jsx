@@ -1,6 +1,6 @@
 import React from "react";
 import { observer } from "mobx-react";
-import Applicant from "./Applicant.js";
+import Applicant from "./Applicant.jsx";
 
 @observer
 class Stage extends React.Component {
