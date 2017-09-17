@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
+import { Provider } from "mobx-react";
+import Board from "./Board";
 
 class KanbanApp extends React.Component {
-
-  render(){
+  render() {
     return (
-      <h1>Tralalala</h1>
-    )
+      <Provider store={this.props.store}>
+        <Board />
+      </Provider>
+    );
   }
-
 }
 
-export default KanbanApp
+export default KanbanApp;
