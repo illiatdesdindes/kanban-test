@@ -1,19 +1,25 @@
-import {observable} from 'mobx'
-import axios from 'axios'
+import mobx, { observable, action, runInAction } from "mobx";
+import Api from "./Api.js";
 
 class Store {
   @observable stages = [];
 
   constructor(stages) {
-
+    this.api = new Api();
   }
 
+  @action
   fetchStages() {
-    axios.get('/stages')
-      .then((response) => {
-        console.log(response)
+    this.api.fetchStages().then(
+      action(response => {
+        this.stages = this.stages.concat(response.data);
       })
+    );
+  }
+
+  toJS() {
+    return mobx.toJS(this);
   }
 }
 
-export default Store
+export default Store;
