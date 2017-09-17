@@ -1,0 +1,35 @@
+@import "vars";
+
+.applicant__component {
+  border-radius: 5px;
+  border: solid $light-gray 1px;
+  padding: 5px;
+  box-shadow: 1px 1px 3px $light-gray;
+}
+
+.applicant__content {
+}
+.applicant__img-wrapper {
+  display: inline-block;
+  width: 20%;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.applicant__info {
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
+}
+.applicant__name {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+.applicant__job {
+  color: gray;
+}
+
+.applicant__footer {
+}
