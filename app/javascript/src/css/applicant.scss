@@ -4,11 +4,14 @@
   border-radius: 5px;
   border: solid $light-gray 1px;
   padding: 5px;
+  margin-bottom: 12px;
   box-shadow: 1px 1px 3px $light-gray;
+  white-space: normal;
 }
 
 .applicant__content {
 }
+
 .applicant__img-wrapper {
   display: inline-block;
   width: 20%;
@@ -22,6 +25,7 @@
   display: inline-block;
   width: 80%;
   vertical-align: top;
+  padding: 0 5px;
 }
 .applicant__name {
   font-size: 1.1em;

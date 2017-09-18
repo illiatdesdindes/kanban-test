@@ -7,6 +7,10 @@ body {
   line-height: 1.3em;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 .navbar__component {
   background: #374697;
   color: white;
