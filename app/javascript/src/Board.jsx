@@ -9,7 +9,7 @@ class Board extends React.Component {
   onDragEnd = result => {
     if (!result.destination) return;
     console.log(result);
-    this.props.store.reorderApplicant(result, this);
+    this.props.store.moveApplicant(result);
   };
 
   render() {

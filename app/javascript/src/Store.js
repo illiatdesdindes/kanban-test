@@ -6,19 +6,18 @@ class Store {
 
   constructor(stages) {
     this.api = new Api();
+    this.api.subscribeProject(stagesData => this.hydrateStages(stagesData));
   }
 
   @action
   fetchStages() {
-    this.api.fetchStages().then(
-      action(response => {
-        this.stages = this.stages.concat(response.data);
-      })
-    );
+    this.api.fetchStages().then(response => {
+      this.hydrateStages(response.data);
+    });
   }
 
   @action
-  reorderApplicant(result, board) {
+  moveApplicant(result) {
     const sourceStageId = parseInt(result.source.droppableId);
     const sourceApplicantIndex = parseInt(result.source.index);
     const sourceStage = this.stages.find(stage => stage.id == sourceStageId);
@@ -30,7 +29,12 @@ class Store {
       stage => stage.id == destinationStageId
     );
     destinationStage.applicants.splice(destinationApplicantIndex, 0, applicant);
-    board.forceUpdate();
+    this.api.updateStages(this.toJS().stages);
+  }
+
+  @action
+  hydrateStages(stagesData) {
+    this.stages.replace(stagesData);
   }
 
   toJS() {
