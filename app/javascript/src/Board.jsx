@@ -8,7 +8,6 @@ import { DragDropContext } from "react-beautiful-dnd";
 class Board extends React.Component {
   onDragEnd = result => {
     if (!result.destination) return;
-    console.log(result);
     this.props.store.moveApplicant(result);
   };
 
