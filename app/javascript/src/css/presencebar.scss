@@ -1,0 +1,10 @@
+@import "vars";
+
+.presencebar__component {
+  background: $layout-bg-color;
+  position: absolute;
+  top: $navbar-height;
+  left: 0;
+  bottom: 0;
+  width: $presencebar-width;
+}

@@ -7,6 +7,7 @@ import "../src/css/stage.scss";
 import "../src/css/board.scss";
 import "../src/css/applicant.scss";
 import "../src/css/navbar.scss";
+import "../src/css/presencebar.scss";
 
 const store = new Store();
 window.store = store;
