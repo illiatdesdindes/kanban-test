@@ -10,6 +10,7 @@ import "../src/css/applicant.scss";
 const store = new Store();
 window.store = store;
 store.fetchStages();
+store.fetchCurrentUser();
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<KanbanApp store={store} />, document.getElementById("app"));

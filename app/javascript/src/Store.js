@@ -3,6 +3,7 @@ import Api from "./Api.js";
 
 class Store {
   @observable stages = [];
+  @observable currentUser = {};
 
   constructor(stages) {
     this.api = new Api();
@@ -14,6 +15,15 @@ class Store {
     this.api.fetchStages().then(response => {
       this.hydrateStages(response.data);
     });
+  }
+
+  @action
+  fetchCurrentUser() {
+    this.api.fectchCurrentUser().then(
+      action(response => {
+        this.currentUser = response.data;
+      })
+    );
   }
 
   @action
