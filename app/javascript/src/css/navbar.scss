@@ -1,0 +1,31 @@
+.navbar__component {
+  background: #374697;
+  color: white;
+  padding: 10px;
+  height: 30px;
+}
+
+.navbar__title {
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+}
+
+.navbar__current-user {
+  display: inline-block;
+  float: right;
+}
+
+.navbar__avatar {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  height: 30px;
+  padding: 2px 0;
+  border-radius: 50%;
+}
+
+.navbar__user-name {
+  display: inline-block;
+  vertical-align: -webkit-baseline-middle;
+  font-size: 1.3em;
+}
