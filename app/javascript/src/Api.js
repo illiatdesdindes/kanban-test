@@ -11,8 +11,13 @@ class Api {
   fetchStages() {
     return axios.get("/stages.json");
   }
+
   fectchCurrentUser() {
     return axios.get("sessions/me");
+  }
+
+  fetchUsers() {
+    return axios.get("users");
   }
 
   // WEBSOCKET

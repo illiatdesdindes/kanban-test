@@ -4,6 +4,7 @@ import Api from "./Api.js";
 class Store {
   @observable stages = [];
   @observable currentUser = {};
+  @observable users = [];
 
   constructor(stages) {
     this.api = new Api();
@@ -22,6 +23,15 @@ class Store {
     this.api.fectchCurrentUser().then(
       action(response => {
         this.currentUser = response.data;
+      })
+    );
+  }
+
+  @action
+  fetchUsers() {
+    this.api.fetchUsers().then(
+      action(response => {
+        this.users.replace(response.data);
       })
     );
   }

@@ -13,6 +13,7 @@ const store = new Store();
 window.store = store;
 store.fetchStages();
 store.fetchCurrentUser();
+store.fetchUsers();
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<KanbanApp store={store} />, document.getElementById("app"));
