@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/me'
+
   root to: 'projects#index'
 
   resources :stages, only: [:index, :show]
