@@ -14,3 +14,17 @@
 .presencebar__user {
   margin-bottom: 10px;
 }
+
+.presencebar__icon {
+  width: 0.8em;
+  height: 0.8em;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.presencebar__icon--online {
+  background: #0fce0f;
+}
+.presencebar__icon--offline {
+  background: gray;
+}
