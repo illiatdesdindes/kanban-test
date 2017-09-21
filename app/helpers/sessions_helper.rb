@@ -7,6 +7,7 @@ module SessionsHelper
   def authenticate_user
     @current_user = User.find_or_create_user(session[:current_user_id])
     session[:current_user_id] = @current_user.id
+    cookies.signed[:current_user_id] = @current_user.id
   end
 
 end
