@@ -26,8 +26,8 @@ class Api {
     this.projectSubscription = this.cable.subscriptions.create(
       { channel: "ProjectChannel" },
       {
-        received: data => {
-          callback(data);
+        received: stagesData => {
+          callback(stagesData);
         }
       }
     );
@@ -35,6 +35,17 @@ class Api {
 
   updateStages(stagesData) {
     this.projectSubscription.perform("updateStages", { stages: stagesData });
+  }
+
+  subscribePresence(callback) {
+    this.presenceSubscription = this.cable.subscriptions.create(
+      {channel : "PresenceChannel"},
+      {
+        received: userData => {
+          callback(userData);
+        }
+      }
+    )
   }
 }
 
