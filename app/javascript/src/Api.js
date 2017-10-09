@@ -39,13 +39,14 @@ class Api {
 
   subscribePresence(callback) {
     this.presenceSubscription = this.cable.subscriptions.create(
-      {channel : "PresenceChannel"},
+      { channel: "PresenceChannel" },
       {
         received: userData => {
+          console.log(userData);
           callback(userData);
         }
       }
-    )
+    );
   }
 }
 

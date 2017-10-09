@@ -9,7 +9,7 @@ class Store {
   constructor(stages) {
     this.api = new Api();
     this.api.subscribeProject(stagesData => this.hydrateStages(stagesData));
-    this.api.subscribePresence(userData => this.hydrateUser(userData))
+    this.api.subscribePresence(userData => this.hydrateUser(userData));
   }
 
   @action
@@ -58,15 +58,15 @@ class Store {
     this.stages.replace(stagesData);
   }
 
-   @action
-   hydrateUser(userData) {
-     let user = this.users.find((user) => user.id == userData.id)
-     if (user) {
-       user = userData
-     } else {
-       this.users.push(userData)
-     }
-   }
+  @action
+  hydrateUser(userData) {
+    let userIndex = this.users.findIndex(user => user.id == userData.id);
+    if (userIndex != -1) {
+      this.users.splice(userIndex, 0, userData);
+    } else {
+      this.users.push(userData);
+    }
+  }
 
   toJS() {
     return mobx.toJS(this);
