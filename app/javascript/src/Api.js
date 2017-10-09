@@ -42,7 +42,6 @@ class Api {
       { channel: "PresenceChannel" },
       {
         received: userData => {
-          console.log(userData);
           callback(userData);
         }
       }
