@@ -3,7 +3,6 @@ import { Provider } from "mobx-react";
 import Board from "./Board.jsx";
 import Navbar from "./Navbar";
 import PresenceBar from "./PresenceBar";
-import DevTools from 'mobx-react-devtools';
 
 class KanbanApp extends React.Component {
   render() {
@@ -15,7 +14,6 @@ class KanbanApp extends React.Component {
             <PresenceBar />
             <Board />
           </div>
-          <DevTools />
         </div>
       </Provider>
     );
