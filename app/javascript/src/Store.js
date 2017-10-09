@@ -62,7 +62,7 @@ class Store {
   hydrateUser(userData) {
     let userIndex = this.users.findIndex(user => user.id == userData.id);
     if (userIndex != -1) {
-      this.users.splice(userIndex, 0, userData);
+      this.users.splice(userIndex, 1, userData);
     } else {
       this.users.push(userData);
     }
